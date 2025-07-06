@@ -1,16 +1,27 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 
-const model = new GoogleGenAI({});
+const ai = new GoogleGenAI({
+    apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+});
 
-async function createResponse(prompt: string){
-    const response = await model.models.generateContent({
+const config = {
+    temperature: 0.45,
+    thinkingConfig: {
+        thinkingBudget: 1024
+    },
+    responseMimeType: "text/plain",
+    systemInstruction: [
+        {
+            text: `Allowed word limit of 60 words.`,
+        }
+    ],
+}
+
+export async function createResponse(prompt: string) {
+    const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
         contents: prompt,
-        config:{
-            thinkingConfig:{
-                thinkingBudget: 1
-            }
-        }
+        config
     });
-    return response.text;
+    return response;
 }
