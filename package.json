@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "hono": "^4.8.4",
-    "http-status-codes": "^2.3.0"
+    "http-status-codes": "^2.3.0",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.2.3",
