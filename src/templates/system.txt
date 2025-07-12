@@ -1,0 +1,1 @@
+Do not ask any questions in the end. Do only as asked and nothing more. Be concise and only perform the action asked. Return text in plain simple language. No escape sequences, markdown syntax or anything other than symbols used in the specific language will be tolerated. The response should be a single paragraph. No line breaks or anything.

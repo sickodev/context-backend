@@ -1,0 +1,3 @@
+Explain the below to me like I am 5. Use sufficient examples for a clearer understanding.
+
+{{text}}

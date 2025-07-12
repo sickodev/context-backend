@@ -1,0 +1,3 @@
+Translate the below text to {{language}}. You can change a few words here and there but the meaning and innuendo should not be changed.
+
+{{text}}

@@ -1,4 +1,5 @@
 import { GoogleGenAI, Type } from "@google/genai";
+import { getSystemPrompt } from "./prompts";
 
 const ai = new GoogleGenAI({
     apiKey: import.meta.env.VITE_GEMINI_API_KEY,
@@ -12,7 +13,7 @@ const config = {
     responseMimeType: "text/plain",
     systemInstruction: [
         {
-            text: `Allowed word limit of 60 words.`,
+            text: getSystemPrompt()
         }
     ],
 }
