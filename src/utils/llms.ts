@@ -1,8 +1,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSystemPrompt } from "./prompts";
+import env from "./env";
 
 const ai = new GoogleGenAI({
-    apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+    apiKey: env.GEMINI_API_KEY,
 });
 
 const config = {
